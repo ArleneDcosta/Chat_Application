@@ -1,0 +1,67 @@
+<% include ./partials/header %>
+<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="background-image:url(https://ak4.picdn.net/shutterstock/videos/11128214/thumb/1.jpg)">
+
+        <div class="container ">
+                <div class="row text-center">
+                  <form action="/profile1/<%=user['username'] %>" method="post" >
+                    <div>
+                            <h2 style="font-family:Mali,cursive">Username : <%=user['username'] %></h2>
+                            <input name="username" value="<%=user['username'] %>" type="hidden">
+                    </div>
+                    <div>
+                    <h2 style="font-family:Mali,cursive">Profile Picture :</h2><img src="/uploads/<%=user['imgname'] %>"class="img-thumbnail" alt="" width="300px" height="300px">
+                    </div>
+                    <div>
+                            <table class="table table-bordered text-center">
+                                    <tbody>
+                                        <tr>
+                                            <td>College:</td>
+                                            <td>Fr Conceicao Rodrigues College Of Engineering</td>
+                                        </tr>
+                                        <tr>
+                                                <td>Username:</td>
+                                                <td><%=user['username']%></td>
+                                              </tr>
+                                      <tr>
+                                        <td>Email:</td>
+                                        <td><%=user['email']%></td>
+                                      </tr>
+
+                                      <tr>
+                                        <td>Role:</td>
+                                        <td><%=user['isAdmin']%></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Status:</td>
+                                        <td><%=user['status']%></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                    </div>
+                    <div class="text-centered">
+
+                      <a class="btn btn-success btn-lg" href="/logout">Logout</a>
+
+
+                    </div>
+                            <div class="form-group">
+                                  <button id="press"class="btn btn-primary btn-lg">Add Status</button>
+                                <input type="text"id="add" name="status" size="35"/>
+                                </div>
+                          <button type="submit" style="padding-top:10px" class="btn btn-info" id="save">save</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+<script>
+    $("#press").click(function(){
+        console.log("reached");
+         $("#add").css({'display':'block'})
+});
+
+</script>
+</body>
+</html>
