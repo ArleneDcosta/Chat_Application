@@ -351,8 +351,8 @@ else{
               //console.log("Event emmited")
           });
           }
-          socket.emit('newMessage', generateMessage('GroupChat', 'uploads/1cc462d02afc62a23915bb4b407b0895','Welcome to the chat app'));
-          socket.broadcast.to(params.room).emit('newMessage', generateMessage('GroupChat','uploads/1cc462d02afc62a23915bb4b407b0895', `${params.name} has joined.`));
+          socket.emit('newMessage', generateMessage('GroupChat', 'uploads/7d2f23d9b86d2e08199f3bfb1ca50f96','Welcome to the chat app'));
+          socket.broadcast.to(params.room).emit('newMessage', generateMessage('GroupChat','uploads/7d2f23d9b86d2e08199f3bfb1ca50f96', `${params.name} has joined.`));
           callback();
         });
 
