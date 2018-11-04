@@ -194,7 +194,7 @@ button:disabled {
   }
 }
 
-.message_body,p a,p{
+.message_body,p,a,p{
     font-size: 15px
 }
 .chat__sidebar ul{
