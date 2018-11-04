@@ -12,11 +12,11 @@
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="/stylesheets/styles.css">
- 
+
 </head>
 
 <body class="chat">
-  
+
   <div class="chat__sidebar">
       <a href="/logout"  class="btn btn-danger center-block" style="font-family:Domine" >LOGOUT</a>
     <h3 style="">Active Users</h3>
@@ -24,7 +24,7 @@
   </div>
 
   <div class="chat__main">
-     
+
     <ol id="messages" class="chat__messages"></ol>
 
     <div class="chat__footer">
@@ -34,7 +34,7 @@
       <button id="send-location" class="btn btn-primary" >Send location</button> &nbsp
       <label  style="padding:10px" class="btn btn-primary"> Add File
       <input id="#add-file" type="file" name="add-file" size="60" style="display:none">
-      </label> 
+      </label>
       </form>
     </div>
   </div>
@@ -47,7 +47,7 @@
         <span class="time">{{createdAt}}</span>
       </div>
       <div class="message__body">
-        <p>{{text}}</p> 
+        <p>{{text}}</p>
       </div>
     </li>
   </script>
@@ -72,7 +72,7 @@
         <a href="/profile/{{from}}"><h4 class="styling">{{from}}</h4></a>
         <span class="time">{{createdAt}}</span>
       </div>
-      <div class="message__body"> 
+      <div class="message__body">
         <p> <a href="{{file}}" download>{{fileName}}</a></p>
       </div>
     </li>
@@ -103,11 +103,11 @@
       </div>
       <div class="message__body">
         <p>
-         <a href="{{file}}" download>{{fileName}}</a> 
+         <a href="{{file}}" download>{{fileName}}</a>
         </p>
       </div>
     </li>
-  </script>  
+  </script>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/libs/jquery-3.1.0.min.js"></script>

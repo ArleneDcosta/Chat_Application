@@ -19,6 +19,9 @@ var app=express();
 //const {MongoClient, ObjectID} = require('mongodb');
 var mongoose=require("mongoose");
 var db = mongoose.connection;
+const dbName = 'myproject';
+
+ mongoose.connect("mongodb://localhost:27017/ProjectApp1", { useNewUrlParser: true });
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log("Connected");
@@ -75,34 +78,10 @@ passport.deserializeUser(User.deserializeUser());
 /*
 
 ));*/
-const dbName = 'myproject';
 
- mongoose.connect("mongodb://localhost:27017/ProjectApp1", { useNewUrlParser: true });
  // mongoose.connect("mongodb+srv://Arlene:F@1lower2@cluster0-pariv.mongodb.net/ProjectApp1?retryWrites=true",  { useNewUrlParser: true });
 // mongodb+srv://Arlene:<PASSWORD>@cluster0-pariv.mongodb.net/test?retryWrites=true
 // Use connect method to connect to the server
-//MongoClient.connect(url, function(err, client) {
-  //assert.equal(null, err);
-  //console.log("Connected successfully to server");
-
-  //const db = client.db(dbName);
-  //collection = db.collection('documents');
-  //client.close();
-//});
-//var url="mongodb://localhost:27017/ProjectApp";
-/*MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    console.log("Reached");
-    var userCollection =db= mongo.collection('user');
-    dbo = db.db("mydb");
-   // console.log(dbo);
-    dbo.createCollection("customers", function(err, res) {
-        console.log("collection created")
-
-      if (err) throw err;
-      db.close();
-    });
- // });*/
 const socketIO=require("socket.io");
 var port=process.env.PORT || 3000;
 var server=http.createServer(app);
@@ -299,9 +278,6 @@ else{
 
 
       var users = new Users();
-
-     // app.use(express.static(publicPath));
-
       io.on('connection', (socket) => {
         console.log('New user connected');
 
