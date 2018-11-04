@@ -28,7 +28,7 @@ var passport    = require("passport");
 var LocalStrategy = require('passport-local').Strategy;
 var User = require("./models/user");
 var collection;
-const MongoClient = require('mongodb').MongoClient;
+
 app.use(require("express-session")({
   secret: "Once again Rusty wins cutest dog!",
   resave: false,
@@ -77,8 +77,9 @@ passport.deserializeUser(User.deserializeUser());
 ));*/
 const dbName = 'myproject';
 
-mongoose.connect("mongodb://localhost:27017/ProjectApp1", { useNewUrlParser: true });
-
+// mongoose.connect("mongodb://localhost:27017/ProjectApp1", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://Arlene:F@1lower2@cluster0-pariv.mongodb.net/ProjectApp1?retryWrites=true");
+// mongodb+srv://Arlene:<PASSWORD>@cluster0-pariv.mongodb.net/test?retryWrites=true
 // Use connect method to connect to the server
 //MongoClient.connect(url, function(err, client) {
   //assert.equal(null, err);
@@ -116,7 +117,7 @@ app.set("view engine","ejs");
 app.use(express.static(__dirname + '/public'));
 
 var User = require("./models/user.js");
-var ADMTChat = require("./models/admt");
+var ADMTChat = require("./models/admt.js");
 var IOTChat = require("./models/iot.js")
 var IPChat = require("./models/ip.js")
 var CNSChat = require("./models/cns.js")
@@ -557,5 +558,5 @@ res.redirect("/login");
      });
 
 server.listen(port,function(req,res){
-  console.log("Server is listening!");
+  console.log(`Started up at port ${port}`);
 });
