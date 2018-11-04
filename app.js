@@ -77,8 +77,8 @@ passport.deserializeUser(User.deserializeUser());
 ));*/
 const dbName = 'myproject';
 
-// mongoose.connect("mongodb://localhost:27017/ProjectApp1", { useNewUrlParser: true });
-mongoose.connect("mongodb+srv://Arlene:F@1lower2@cluster0-pariv.mongodb.net/ProjectApp1?retryWrites=true");
+mongoose.connect("mongodb://localhost:27017/ProjectApp1", { useNewUrlParser: true });
+// mongoose.connect("mongodb+srv://Arlene:F@1lower2@cluster0-pariv.mongodb.net/ProjectApp1?retryWrites=true",  { useNewUrlParser: true });
 // mongodb+srv://Arlene:<PASSWORD>@cluster0-pariv.mongodb.net/test?retryWrites=true
 // Use connect method to connect to the server
 //MongoClient.connect(url, function(err, client) {
