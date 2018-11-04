@@ -14,10 +14,10 @@ var flash=require("connect-flash");
 var http=require("http");
 var multer=require("multer");
 
-var uploads = multer({ dest: 'uploads/' })
 var app=express();
 //const {MongoClient, ObjectID} = require('mongodb');
 var mongoose=require("mongoose");
+
 const dbName = 'myproject';
 
  mongoose.connect("mongodb://localhost:27017/ProjectApp1", { useNewUrlParser: true });
@@ -26,7 +26,7 @@ var session = require("express-session");
 var passport    = require("passport");
 var LocalStrategy = require('passport-local').Strategy;
 var User = require("./models/user");
-var collection;
+
 
 app.use(require("express-session")({
   secret: "Once again Rusty wins cutest dog!",
