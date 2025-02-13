@@ -1,8 +1,5 @@
 # Chat App with Node.js and Frontend using HTML & JavaScript
 
-
-# Chat App with Node.js and Frontend using HTML & JavaScript
-
 ## Overview
 This project is a real-time chat application built using **Node.js** on the backend and **HTML**, **JavaScript** on the frontend. The application allows users to create and join different chat rooms based on subjects. Teachers act as administrators, while students can join rooms, share content, and discuss topics.
 
