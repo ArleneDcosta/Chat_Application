@@ -1,6 +1,6 @@
 # Chat App with Node.js and Frontend using HTML & JavaScript
 
-```markdown
+
 # Chat App with Node.js and Frontend using HTML & JavaScript
 
 ## Overview
